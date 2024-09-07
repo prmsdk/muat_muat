@@ -46,11 +46,11 @@ const RowTable: FC<RowTableProps> = ({ product }) => {
             <TableCell className="font-medium">{product.nama}</TableCell>
             <TableCell>{product.stok}</TableCell>
             <TableCell>{currencyFormatter.format(product.harga)}</TableCell>
-            <TableCell className="gap-2 flex">
+            <TableCell className="flex gap-2">
                 {/* Dialog untuk Edit Produk */}
                 <Dialog open={openForm} onOpenChange={setOpenForm}>
                     <DialogTrigger asChild>
-                        <Button variant="default">
+                        <Button size={"sm"} variant="default">
                             <Pencil size={16} className="mr-2" /> Edit
                         </Button>
                     </DialogTrigger>
@@ -63,7 +63,7 @@ const RowTable: FC<RowTableProps> = ({ product }) => {
                             </DialogDescription>
                         </DialogHeader>
                         <div className="grid gap-4 py-4">
-                            <div className="w-full items-center">
+                            <div className="items-center w-full">
                                 <Label htmlFor="name">Nama:</Label>
                                 <Input
                                     id="name"
@@ -75,12 +75,12 @@ const RowTable: FC<RowTableProps> = ({ product }) => {
                                     }
                                 />
                                 {errors.nama && (
-                                    <div className="text-red-500 text-sm mt-2">
+                                    <div className="mt-2 text-sm text-red-500">
                                         {errors.nama}
                                     </div>
                                 )}
                             </div>
-                            <div className="w-full items-center">
+                            <div className="items-center w-full">
                                 <Label htmlFor="harga">Stok:</Label>
                                 <Input
                                     id="harga"
@@ -95,12 +95,12 @@ const RowTable: FC<RowTableProps> = ({ product }) => {
                                     }
                                 />
                                 {errors.stok && (
-                                    <div className="text-red-500 text-sm mt-2">
+                                    <div className="mt-2 text-sm text-red-500">
                                         {errors.stok}
                                     </div>
                                 )}
                             </div>
-                            <div className="w-full items-center">
+                            <div className="items-center w-full">
                                 <Label htmlFor="stok">Harga:</Label>
                                 <Input
                                     id="stok"
@@ -115,7 +115,7 @@ const RowTable: FC<RowTableProps> = ({ product }) => {
                                     }
                                 />
                                 {errors.harga && (
-                                    <div className="text-red-500 text-sm mt-2">
+                                    <div className="mt-2 text-sm text-red-500">
                                         {errors.harga}
                                     </div>
                                 )}
@@ -146,7 +146,7 @@ const RowTable: FC<RowTableProps> = ({ product }) => {
                 {/* Dialog untuk Hapus Produk */}
                 <Dialog open={openDelete} onOpenChange={setOpenDelete}>
                     <DialogTrigger asChild>
-                        <Button variant="destructive">
+                        <Button size={"sm"} variant="destructive">
                             <Trash size={16} className="mr-2" />
                             Hapus
                         </Button>

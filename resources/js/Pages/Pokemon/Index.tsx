@@ -101,11 +101,11 @@ const PokemonPage: FC<PokemonProps> = () => {
                                         <CardHeader className="flex flex-row justify-between">
                                             <div>
                                                 <CardTitle>
-                                                    Tabel Produk
+                                                    Tabel Pokemon
                                                 </CardTitle>
                                                 <CardDescription>
-                                                    Manage your Produk and view
-                                                    their sales performance.
+                                                    Daftar nama pokemon dari
+                                                    https://pokeapi.co/api/v2/pokemon?limit=50&offset=0.
                                                 </CardDescription>
                                             </div>
                                         </CardHeader>
@@ -116,9 +116,9 @@ const PokemonPage: FC<PokemonProps> = () => {
                                                         <TableHead className="w-max">
                                                             Name
                                                         </TableHead>
-                                                        <TableHead>
+                                                        {/* <TableHead>
                                                             Url
-                                                        </TableHead>
+                                                        </TableHead> */}
                                                     </TableRow>
                                                 </TableHeader>
                                                 <TableBody>

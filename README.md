@@ -35,3 +35,5 @@ Langkah-Langkah Instalasi (jalankan pada terminal/command prompt):
 -   Jalankan Server
     `php artisan serve`
     `npm run dev`
+-   Kunjungi
+    `http://localhost:8000`
