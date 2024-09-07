@@ -83,9 +83,9 @@ const ProductPage: FC<ProductProps> = ({ products }) => {
                 </div>
                 <div className="flex flex-col">
                     <Navbar />
-                    <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
+                    <main className="grid items-start flex-1 gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
                         <Tabs defaultValue="all">
-                            <div className="md:flex md:justify-between w-full my-4">
+                            <div className="w-full gap-2 my-4 md:flex md:justify-between">
                                 {/* Dialog Untuk Tambah Produk */}
                                 <Dialog
                                     open={openForm}
@@ -108,7 +108,7 @@ const ProductPage: FC<ProductProps> = ({ products }) => {
                                             </DialogDescription>
                                         </DialogHeader>
                                         <div className="grid gap-4 py-4">
-                                            <div className="w-full items-center">
+                                            <div className="items-center w-full">
                                                 <Label htmlFor="name">
                                                     Nama:
                                                 </Label>
@@ -125,12 +125,12 @@ const ProductPage: FC<ProductProps> = ({ products }) => {
                                                     }
                                                 />
                                                 {errors.nama && (
-                                                    <div className="text-red-500 text-sm mt-2">
+                                                    <div className="mt-2 text-sm text-red-500">
                                                         {errors.nama}
                                                     </div>
                                                 )}
                                             </div>
-                                            <div className="w-full items-center">
+                                            <div className="items-center w-full">
                                                 <Label htmlFor="harga">
                                                     Stok:
                                                 </Label>
@@ -149,12 +149,12 @@ const ProductPage: FC<ProductProps> = ({ products }) => {
                                                     }
                                                 />
                                                 {errors.stok && (
-                                                    <div className="text-red-500 text-sm mt-2">
+                                                    <div className="mt-2 text-sm text-red-500">
                                                         {errors.stok}
                                                     </div>
                                                 )}
                                             </div>
-                                            <div className="w-full items-center">
+                                            <div className="items-center w-full">
                                                 <Label htmlFor="stok">
                                                     Harga:
                                                 </Label>
@@ -173,7 +173,7 @@ const ProductPage: FC<ProductProps> = ({ products }) => {
                                                     }
                                                 />
                                                 {errors.harga && (
-                                                    <div className="text-red-500 text-sm mt-2">
+                                                    <div className="mt-2 text-sm text-red-500">
                                                         {errors.harga}
                                                     </div>
                                                 )}
@@ -217,7 +217,7 @@ const ProductPage: FC<ProductProps> = ({ products }) => {
                                             }
                                             type="search"
                                             placeholder="Search products..."
-                                            className="w-full appearance-none bg-background pl-8 shadow-none"
+                                            className="w-full pl-8 shadow-none appearance-none bg-background"
                                         />
                                     </div>
                                 </form>
