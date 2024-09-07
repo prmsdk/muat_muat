@@ -27,7 +27,7 @@ const Navbar: FC<NavbarProps> = () => {
                         size="icon"
                         className="shrink-0 md:hidden"
                     >
-                        <Menu className="h-5 w-5" />
+                        <Menu className="w-5 h-5" />
                         <span className="sr-only">Toggle navigation menu</span>
                     </Button>
                 </SheetTrigger>
@@ -37,27 +37,31 @@ const Navbar: FC<NavbarProps> = () => {
                             href="#"
                             className="flex items-center gap-2 text-lg font-semibold"
                         >
-                            <Package2 className="h-6 w-6" />
+                            <img
+                                src="/favicon.ico"
+                                alt="Favicon muatmuat"
+                                className=""
+                            />
                             <span className="sr-only">MuatMuat</span>
                         </Link>
                         <Link
                             href={route("products.index")}
                             className="mx-[-0.65rem] flex items-center gap-4 rounded-xl bg-muted px-3 py-2 text-foreground hover:text-foreground"
                         >
-                            <ShoppingCart className="h-5 w-5" />
+                            <ShoppingCart className="w-5 h-5" />
                             Tabel Produk
                         </Link>
                         <Link
                             href="#"
                             className="mx-[-0.65rem] flex items-center gap-4 rounded-xl bg-muted px-3 py-2 text-foreground hover:text-foreground"
                         >
-                            <ShoppingCart className="h-5 w-5" />
+                            <ShoppingCart className="w-5 h-5" />
                             Tabel Pokemon
                         </Link>
                     </nav>
                 </SheetContent>
             </Sheet>
-            <div className="w-full flex-1"></div>
+            <div className="flex-1 w-full"></div>
         </header>
     );
 };

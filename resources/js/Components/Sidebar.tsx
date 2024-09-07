@@ -7,13 +7,17 @@ import { DrawingPinIcon } from "@radix-ui/react-icons";
 
 const Sidebar: FC<{}> = ({}) => {
     return (
-        <div className="flex h-full max-h-screen flex-col gap-2">
+        <div className="flex flex-col h-full max-h-screen gap-2">
             <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
                 <Link
                     href="/"
                     className="flex items-center gap-2 font-semibold"
                 >
-                    <Package2 className="h-6 w-6" />
+                    <img
+                        src="/favicon.ico"
+                        alt="Favicon muatmuat"
+                        className="w-6 h-6"
+                    />
                     <span className="">MuatMuat</span>
                 </Link>
             </div>
@@ -21,16 +25,16 @@ const Sidebar: FC<{}> = ({}) => {
                 <nav className="grid items-start px-2 text-sm font-medium lg:px-4">
                     <Link
                         href={route("products.index")}
-                        className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                        className="flex items-center gap-3 px-3 py-2 transition-all rounded-lg text-muted-foreground hover:text-primary"
                     >
-                        <ShoppingCart className="h-4 w-4" />
+                        <ShoppingCart className="w-4 h-4" />
                         Tabel Produk
                     </Link>
                     <Link
                         href={route("pokemon.index")}
-                        className="flex items-center gap-3 rounded-lg px-3 py-2 text-muted-foreground transition-all hover:text-primary"
+                        className="flex items-center gap-3 px-3 py-2 transition-all rounded-lg text-muted-foreground hover:text-primary"
                     >
-                        <DrawingPinIcon className="h-4 w-4" />
+                        <DrawingPinIcon className="w-4 h-4" />
                         Tabel Pokemon
                     </Link>
                 </nav>

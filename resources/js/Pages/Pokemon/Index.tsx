@@ -33,7 +33,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/Components/ui/tabs";
 import { Plus, Save, Search } from "lucide-react";
 import { Label } from "@/Components/ui/label";
 import { Input } from "@/Components/ui/input";
-import { router, useForm, usePage } from "@inertiajs/react";
+import { Head, router, useForm, usePage } from "@inertiajs/react";
 import {
     Select,
     SelectContent,
@@ -70,15 +70,16 @@ const PokemonPage: FC<PokemonProps> = () => {
 
     return (
         <>
+            <Head title="Tabel Pokemon" />
             <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
                 <div className="hidden border-r bg-muted/40 md:block">
                     <Sidebar />
                 </div>
                 <div className="flex flex-col">
                     <Navbar />
-                    <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
+                    <main className="grid items-start flex-1 gap-4 p-4 sm:px-6 sm:py-0 md:gap-8">
                         <Tabs defaultValue="all">
-                            <div className="md:flex md:justify-between w-full my-4">
+                            <div className="w-full my-4 md:flex md:justify-between">
                                 {/* Pencarian Pokemon */}
                                 <form className="flex gap-2">
                                     <div className="relative w-full">
@@ -90,7 +91,7 @@ const PokemonPage: FC<PokemonProps> = () => {
                                             }
                                             type="search"
                                             placeholder="Search products..."
-                                            className="w-full appearance-none bg-background pl-8 shadow-none"
+                                            className="w-full pl-8 shadow-none appearance-none bg-background"
                                         />
                                     </div>
                                 </form>

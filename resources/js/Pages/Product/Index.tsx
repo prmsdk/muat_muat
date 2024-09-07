@@ -34,7 +34,7 @@ import RowTable from "./RowTable";
 import { Plus, Save, Search } from "lucide-react";
 import { Label } from "@/Components/ui/label";
 import { Input } from "@/Components/ui/input";
-import { router, useForm, usePage } from "@inertiajs/react";
+import { Head, router, useForm, usePage } from "@inertiajs/react";
 import {
     Select,
     SelectContent,
@@ -77,6 +77,7 @@ const ProductPage: FC<ProductProps> = ({ products }) => {
 
     return (
         <>
+            <Head title="Tabel Produk" />
             <div className="grid min-h-screen w-full md:grid-cols-[220px_1fr] lg:grid-cols-[280px_1fr]">
                 <div className="hidden border-r bg-muted/40 md:block">
                     <Sidebar />
@@ -207,7 +208,7 @@ const ProductPage: FC<ProductProps> = ({ products }) => {
                                     </DialogContent>
                                 </Dialog>
                                 {/* Cari Produk */}
-                                <form className="flex gap-2">
+                                <form className="flex gap-2 mt-4 lg:mt-0">
                                     <div className="relative w-full">
                                         <Search className="absolute left-2.5 top-2.5 h-4 w-4 text-muted-foreground" />
                                         <Input
